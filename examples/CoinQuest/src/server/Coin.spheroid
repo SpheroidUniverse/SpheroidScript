@@ -1,0 +1,19 @@
+val COIN_ID_MULTIPLIER = 10000000
+
+fun Coin(id, location) {
+    return dynamicOf(id = id, location = location)
+}
+
+fun coinIdToLocation(id) {
+    return LatLng(
+        id.first / COIN_ID_MULTIPLIER.toDouble(),
+        id.second / COIN_ID_MULTIPLIER.toDouble()
+    )
+}
+
+fun coinLocationToId(location) {
+    return Pair(
+        (location.lat * COIN_ID_MULTIPLIER).toLong(),
+        (location.lng * COIN_ID_MULTIPLIER).toLong()
+    )
+}

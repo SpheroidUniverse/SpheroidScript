@@ -1,0 +1,2 @@
+val COIN_RESTORE_INTERVAL = TimeInterval(hours = 1)
+val COIN_DENSITY = 0.001

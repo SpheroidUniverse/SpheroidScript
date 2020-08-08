@@ -1,0 +1,30 @@
+val COIN_INTERVAL = sqrt(1 / COIN_DENSITY)
+
+fun coinGeneratorGetCoins(center, radius, callback) {
+    val ruler = Ruler(center)
+    val grid = SpatialGrid(COIN_INTERVAL)
+    val bounds = rulerGetBounds(ruler, radius)
+
+    spatialGridGetCells(grid, bounds) {
+        val coin = _coinGeneratorGetCoin(it)
+
+        if (rulerIsInRadius(ruler, coin.location, radius))
+            callback.invoke(coin)
+    }
+}
+
+fun coinGeneratorGetCoin(location) {
+    val grid = SpatialGrid(COIN_INTERVAL)
+    val cell = spatialGridGetCell(grid, location)
+    val coin = _coinGeneratorGetCoin(cell)
+    return coin
+}
+
+fun _coinGeneratorGetCoin(cell) {
+    val random = Random(cell.columnIndex * 3 * cell.rowIndex * 5)
+    val lat = cell.lat + random.nextDouble() * cell.latInterval
+    val lng = cell.lng + random.nextDouble() * cell.lngInterval
+    val location = LatLng(lat, lng)
+    val coin = Coin(coinLocationToId(location), location)
+    return coin
+}

@@ -1,0 +1,38 @@
+val RENDERING_RADIUS = 75
+
+@Action
+fun getCoins() {
+    if (!Client.location)
+        return Exception("Location is not initialized.")
+
+    val coins = mutableListOf()
+    val cache = mutableDynamicOf(takes = null)
+    var totalCoinCount = 0
+
+    coinGeneratorGetCoins(Client.location, RENDERING_RADIUS) {
+        totalCoinCount = totalCoinCount + 1
+
+        if (!isCoinTaken(it, cache))
+            coins.add(it)
+    }
+
+    println("getCoins: total=$totalCoinCount, taken=${(totalCoinCount - coins.size)}")
+    return GetCoinsResult(coins)
+}
+
+fun isCoinTaken(coin, cache) {
+    if (!cache.takes)
+        cache.takes =
+            select * from takes t
+            where t.userId == Client.userId && t.timestamp > Date() - COIN_RESTORE_INTERVAL
+
+    for (take in cache.takes)
+        if (take.coinId == coin.id)
+            return true
+
+    return false
+}
+
+fun GetCoinsResult(coins) {
+    return dynamicOf(coins = coins)
+}

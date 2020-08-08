@@ -1,0 +1,33 @@
+val DEG_TO_RAD = PI / 180
+val RAD_TO_DEG = 180 / PI
+val EARTH_RADIUS = 6378137
+val EARTH_CIRCUMFERENCE = 2 * PI * EARTH_RADIUS
+val LAT_TO_METERS = EARTH_CIRCUMFERENCE / 360
+val METERS_TO_LAT = 1 / LAT_TO_METERS
+
+fun Ruler(center) {
+    val lngToMeters = rulerLngToMeters(center.lat)
+    val metersToLng = 1 / lngToMeters
+    return dynamicOf(center = center, lngToMeters = lngToMeters, metersToLng = metersToLng)
+}
+
+fun rulerLngToMeters(lat) {
+    return cos(lat * DEG_TO_RAD) * LAT_TO_METERS
+}
+
+fun rulerGetBounds(ruler, radius) {
+    val center = ruler.center
+    val radiusLat = radius * METERS_TO_LAT
+    val radiusLng = radius * ruler.metersToLng
+
+    return Bounds(
+        LatLng(center.lat - radiusLat, center.lng - radiusLng),
+        LatLng(center.lat + radiusLat, center.lng + radiusLng))
+}
+
+fun rulerIsInRadius(ruler, location, radius) {
+    val center = ruler.center
+    val latDiff = abs(center.lat - location.lat) * LAT_TO_METERS
+    val lngDiff = abs(center.lng - location.lng) * ruler.lngToMeters
+    return latDiff * latDiff + lngDiff * lngDiff <= radius * radius
+}

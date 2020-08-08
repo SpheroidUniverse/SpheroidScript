@@ -1,0 +1,12 @@
+@Action
+fun startup() {
+    val balance =
+        select value(balance) from balances b
+        where b.id == Client.userId
+
+    return StartupResult(balance ?: 0)
+}
+
+fun StartupResult(balance) {
+    return dynamicOf(balance = balance)
+}

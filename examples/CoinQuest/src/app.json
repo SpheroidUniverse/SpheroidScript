@@ -1,0 +1,17 @@
+{
+  "server": [   
+    "./server/Constants.spheroid",
+    "./server/Bounds.spheroid",
+    "./server/Coin.spheroid",
+    "./server/Ruler.spheroid",
+    "./server/SpatialGrid.spheroid",
+    "./server/CoinGenerator.spheroid",
+    "./server/StartupAction.spheroid",
+    "./server/GetCoinsAction.spheroid",
+    "./server/TakeAction.spheroid"
+  ],
+  "client": [   
+    "./client/Client.spheroid"
+  ],
+  "version": "1.0.0"
+}

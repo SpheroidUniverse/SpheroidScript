@@ -1,0 +1,25 @@
+@Action
+fun take(request) {
+    val coinId = request.coinId
+    val coinLocation = coinIdToLocation(coinId)
+    val coin = coinGeneratorGetCoin(coinLocation)
+
+    if (!coin)
+        return Exception("Invalid request.")
+    
+    insert takes (id, userId, timestamp, coinId)
+    values(UUID(), Client.userId, Date(), coinId)
+    
+    insert balances b (id, balance) values (Client.userId, 1)
+    on duplicate key update balance = b.balance + 1
+    
+    val balance =
+        select value(balance) from balances b
+        where b.id == Client.userId
+    
+    return TakeResult(balance)
+}
+
+fun TakeResult(balance) {    
+    return dynamicOf(balance = balance)
+}

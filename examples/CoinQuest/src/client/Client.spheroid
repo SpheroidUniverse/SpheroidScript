@@ -1,0 +1,190 @@
+val geoAnchor = GeoAnchor.default
+val coinModel = Model(source = Source("/assets/coin_gold.glb"))
+val coinAudio = Audio(source = Source("/assets/jump.ogg"))
+val coinIcon = Image(source = Source("/assets/coin.png"))
+val coinIds = mutableSetOf()
+var currentBalance
+var isLocationCorrect = false
+
+fun main() {
+    println("Demo Coin Quest is started")
+
+    loadIcon {
+        println("Icon is loaded")
+
+        Server.action("startup") { response, error ->
+            if (error != null)
+                handleError(error)
+            else
+                setBalance(response.balance)
+        }
+    }
+
+    loadAssets {
+        println("Assets are loaded")
+
+        Location.onChange(threshold = Distance(meters = 5)) {
+            updateCoins()
+        }
+
+        Location.onCorrect {
+            println("Location is corrected")
+            isLocationCorrect = true
+            updateCoins()
+        }
+    }
+
+    Location.onInit {
+        println("Location is initialized")
+    }
+
+    Location.onUninit {
+        println("Location is uninitialized")        
+        geoAnchor.children.clear()
+        Map.markers.clear()
+        coinIds.clear()
+        isLocationCorrect = false
+    }
+}
+
+fun updateCoins() {
+    if (!isLocationCorrect) 
+        return
+    
+    Server.action("getCoins") { response, error ->        
+        if (error != null)
+            handleError(error)        
+        else {
+            println("${response.coins.size} coins have been loaded")
+
+            for (coin in response.coins)
+                updateCoin(coin)
+        }
+    }    
+}
+
+fun setBalance(newBalance) {
+    if (currentBalance != newBalance) {
+        currentBalance = newBalance
+        coinIcon.load {
+            println("Notification: $newBalance coins")
+            Notification.show(icon = this, text = newBalance.toString())
+        }
+    }
+}
+
+fun loadIcon(callback) {
+    coinIcon.load { success, error ->
+        if (!success)
+            handleError(Exception("Failed to load coin icon: $error"))
+
+        callback.invoke()
+    }
+}
+
+fun loadAssets(callback) {
+    coinModel.load { success, error ->
+        if (!success)
+            handleError(Exception("Failed to load coin model: $error"))
+
+        coinAudio.load { success, error ->
+            if (!success)
+                handleError(Exception("Failed to load coin audio: $error"))
+
+            callback.invoke()
+        }
+    }
+}
+
+fun updateCoin(coin) {
+    if (!coinIds.add(coin.id))
+        return
+
+    val node = ModelNode(
+        model = coinModel,
+        scale = Vector3(3.5),
+        position = Vector3(y = -1)
+    )
+
+    node.location = coin.location
+    geoAnchor.children.add(node)
+
+    val marker = MapMarker(location = coin.location)
+    Map.markers.add(marker)
+
+    // Idle animation
+
+    val rotateAnimation1 = RotationAnimation(
+        by = Vector3(y = 180),
+        duration = TimeInterval(seconds = 3),
+        interpolation = "linear"
+    )
+
+    val idleController = node.getAnimationController(AnimationSequence(children = listOf(rotateAnimation1, rotateAnimation1)))
+
+    // Jump animation
+
+    val zeroRotation = RotationAnimation(
+        to = Vector3(y = 0),
+        duration = TimeInterval(seconds = 0),
+        interpolation = "linear"
+    )
+
+    val rotateAnimation2 = RotationAnimation(
+        by = Vector3(y = 180),
+        duration = TimeInterval(seconds = 0.25),
+        interpolation = "linear"
+    )
+
+    val upAnimation = PositionAnimation(
+        by = Vector3(y = 10),
+        duration = TimeInterval(seconds = 0.5),
+        interpolation = "linear"
+    )
+
+    val downAnimation = PositionAnimation(
+        by = Vector3(y = -10),
+        duration = TimeInterval(seconds = 0.5),
+        interpolation = "linear"
+    )
+
+    val scaleAnimation = ScaleAnimation(
+        to = Vector3(0),
+        duration = TimeInterval(seconds = 0.5),
+        interpolation = "accelerate"
+    )
+
+    val waitAnimation = WaitAnimation(duration = TimeInterval(seconds = 0.5))
+    val rotationSequenceJump = AnimationSequence(listOf(zeroRotation, rotateAnimation2, rotateAnimation2, rotateAnimation2, rotateAnimation2))
+    val positionSequenceJump = AnimationSequence(listOf(upAnimation, downAnimation))
+    val scaleSequenceJump = AnimationSequence(listOf(waitAnimation, scaleAnimation))
+    val group = AnimationGroup(listOf(rotationSequenceJump, positionSequenceJump, scaleSequenceJump))
+    val jumpController = node.getAnimationController(group)
+
+    jumpController.onStart {
+        coinAudio.play()
+    }
+
+    node.onTap {
+        jumpController.onComplete {
+            geoAnchor.children.remove(node)
+            Map.markers.remove(marker)
+            coinIds.remove(coin.id)
+        }
+
+        jumpController.play()
+
+        Server.action("take", request = dynamicOf(coinId = coin.id)) { response, error ->
+            if (error != null)
+                handleError(error)
+            else
+                setBalance(response.balance)
+        }
+    }
+
+    idleController.play(loop = true)
+}
+
+fun handleError(error) {
+    error("Error: $error")
+}

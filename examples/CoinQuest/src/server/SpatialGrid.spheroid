@@ -1,0 +1,64 @@
+fun SpatialGrid(interval) {
+    val latInterval = interval * METERS_TO_LAT
+    return dynamicOf(interval = interval, latInterval = latInterval)
+}
+
+fun spatialGridGetRowIndex(grid, lat) {
+    return (lat / grid.latInterval).toLong()
+}
+
+fun spatialGridGetCells(grid, bounds, callback) {
+    val minRowIndex = spatialGridGetRowIndex(grid, bounds.sw.lat)
+    val maxRowIndex = spatialGridGetRowIndex(grid, bounds.ne.lat)
+
+    for (rowIndex in minRowIndex..maxRowIndex) {
+        val row = spatialGridGetRow(grid, rowIndex)
+        val minColumnIndex = spatialGridRowGetColumnIndex(row, bounds.sw.lng)
+        val maxColumnIndex = spatialGridRowGetColumnIndex(row, bounds.ne.lng)
+
+        for (columnIndex in minColumnIndex..maxColumnIndex) {
+            val cell = spatialGridRowGetCell(row, columnIndex)
+            callback.invoke(cell)
+        }
+    }
+}
+
+fun spatialGridGetCell(grid, location) {
+    val rowIndex = spatialGridGetRowIndex(grid, location.lat)
+    val row = spatialGridGetRow(grid, rowIndex)
+    val columnIndex = spatialGridRowGetColumnIndex(row, location.lng)
+    val cell = spatialGridRowGetCell(row, columnIndex)
+    return cell
+}
+
+fun spatialGridGetRow(grid, rowIndex) {
+    val lat = rowIndex * grid.latInterval
+    val metersToLng = 1 / rulerLngToMeters(lat)
+    val lngInterval = grid.interval * metersToLng
+    val row = SpatialGridRow(grid, rowIndex, lat, lngInterval)
+    return row
+}
+
+fun SpatialGridRow(grid, index, lat, lngInterval) {
+    return dynamicOf(grid = grid, index = index, lat = lat, lngInterval = lngInterval)
+}
+
+fun spatialGridRowGetColumnIndex(row, lng) {
+    return (lng / row.lngInterval).toLong()
+}
+
+fun spatialGridRowGetCell(row, columnIndex) {
+    val lng = columnIndex * row.lngInterval
+    val cell = SpatialGridCell(row.index, columnIndex, row.lat, lng, row.grid.latInterval, row.lngInterval)
+    return cell
+}
+
+fun SpatialGridCell(rowIndex, columnIndex, lat, lng, latInterval, lngInterval) {
+    return dynamicOf(
+        rowIndex = rowIndex,
+        columnIndex = columnIndex,
+        lat = lat,
+        lng = lng,
+        latInterval = latInterval,
+        lngInterval = lngInterval)
+}
