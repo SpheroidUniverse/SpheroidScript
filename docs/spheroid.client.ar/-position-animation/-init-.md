@@ -4,7 +4,6 @@
 
 # <init>  
  
-Brief description  
 
 
 ## Parameters  
@@ -16,8 +15,8 @@ jvm
 | interpolation| Possible values: linear, accelerate, deccelerate, acceleratedeccelerate
   
   
-fun [<init>](-init-.md)(to: [Vector3](../../spheroid/-vector3/index.md), duration: [TimeInterval](../../spheroid/-time-interval/index.md)?, interpolation: String?)  
-fun [<init>](-init-.md)(by: [Vector3](../../spheroid/-vector3/index.md), duration: [TimeInterval](../../spheroid/-time-interval/index.md)?, interpolation: String?)  
+fun [<init>](-init-.md)(to: [Vector3](../../spheroid/-vector3/index.md), duration: [TimeInterval](../../spheroid/-time-interval/index.md)?, interpolation: [String](../../spheroid/-string/index.md)?)  
+fun [<init>](-init-.md)(by: [Vector3](../../spheroid/-vector3/index.md), duration: [TimeInterval](../../spheroid/-time-interval/index.md)?, interpolation: [String](../../spheroid/-string/index.md)?)  
 
 
 

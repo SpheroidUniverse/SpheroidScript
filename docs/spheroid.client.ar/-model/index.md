@@ -10,8 +10,8 @@
   
 |  Name|  Summary| 
 |---|---|
-| [load](../../spheroid/-loadable/load.md)| open override fun [load](../../spheroid/-loadable/load.md)(callback: ([Boolean](../../spheroid/-boolean/index.md), [Exception](../../spheroid/-exception/index.md)??) -> Unit)  <br><br><br>
-| toString| open override fun toString(): String  <br><br><br>
+| [load](../../spheroid/-loadable/load.md)| open override fun [load](../../spheroid/-loadable/load.md)(callback: ([Boolean](../../spheroid/-boolean/index.md), [Exception](../../spheroid/-exception/index.md)??) -> [Unit](../../spheroid/-unit/index.md))  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 
 
 ## Properties  

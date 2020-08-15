@@ -10,13 +10,13 @@
   
 |  Name|  Summary| 
 |---|---|
-| toString| open override fun toString(): String  <br><br><br>
+| toString| open override fun toString(): [String](../../../spheroid/-string/index.md)  <br><br><br>
 
 
 ## Properties  
   
 |  Name|  Summary| 
 |---|---|
-| [isAndroid](index.md#spheroid.server/Client.Device/isAndroid/#/PointingToDeclaration/)|  val [isAndroid](index.md#spheroid.server/Client.Device/isAndroid/#/PointingToDeclaration/): Boolean   <br>
-| [isIOS](index.md#spheroid.server/Client.Device/isIOS/#/PointingToDeclaration/)|  val [isIOS](index.md#spheroid.server/Client.Device/isIOS/#/PointingToDeclaration/): Boolean   <br>
+| [isAndroid](index.md#spheroid.server/Client.Device/isAndroid/#/PointingToDeclaration/)|  val [isAndroid](index.md#spheroid.server/Client.Device/isAndroid/#/PointingToDeclaration/): [Boolean](../../../spheroid/-boolean/index.md)   <br>
+| [isIOS](index.md#spheroid.server/Client.Device/isIOS/#/PointingToDeclaration/)|  val [isIOS](index.md#spheroid.server/Client.Device/isIOS/#/PointingToDeclaration/): [Boolean](../../../spheroid/-boolean/index.md)   <br>
 

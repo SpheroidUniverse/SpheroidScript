@@ -4,7 +4,6 @@
 
 # listOf  
  
-Brief description  
 Returns a new read-only list of given elements.  
   
   

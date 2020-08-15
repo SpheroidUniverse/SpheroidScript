@@ -4,7 +4,7 @@
 
 # set  
  
-abstract operator fun [set](set.md)(name: String, value: Any?)  
+abstract operator fun [set](set.md)(name: [String](../../spheroid/-string/index.md), value: Any?)  
 
 
 

@@ -10,8 +10,8 @@
   
 |  Name|  Summary| 
 |---|---|
-| [load](load.md)| open fun [load](load.md)(callback: ([Boolean](../-boolean/index.md), [Exception](../-exception/index.md)??) -> Unit)  <br><br><br>
-| toString| open override fun toString(): String  <br><br><br>
+| [load](load.md)| open fun [load](load.md)(callback: ([Boolean](../-boolean/index.md), [Exception](../-exception/index.md)??) -> [Unit](../-unit/index.md))  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 
 
 ## Properties  

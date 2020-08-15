@@ -4,7 +4,6 @@
 
 # remove  
  
-Brief description  
 Removes a single instance of the specified element from this collection, if it is present.  
   
 

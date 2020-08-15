@@ -4,11 +4,10 @@
 
 # repeat  
  
-Brief description  
 Executes the given function [action]() specified number of [times]().A zero-based index of current iteration is passed as a parameter to [action]().  
   
   
-fun [repeat](repeat.md)(times: Int, action: (Int) -> Unit)  
+fun [repeat](repeat.md)(times: [Long](../spheroid/-long/index.md), action: ([Long](../spheroid/-long/index.md)) -> [Unit](-unit/index.md))  
 
 
 

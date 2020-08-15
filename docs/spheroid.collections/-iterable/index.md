@@ -12,7 +12,7 @@ interface [Iterable](index.md)<[T](index.md) : Any?>
   
 |  Name|  Summary| 
 |---|---|
-| toString| open override fun toString(): String  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 
 
 ## Inheritors  

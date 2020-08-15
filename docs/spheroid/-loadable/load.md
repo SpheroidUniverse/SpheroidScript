@@ -4,7 +4,7 @@
 
 # load  
  
-open fun [load](load.md)(callback: ([Boolean](../-boolean/index.md), [Exception](../-exception/index.md)??) -> Unit)  
+open fun [load](load.md)(callback: ([Boolean](../-boolean/index.md), [Exception](../-exception/index.md)??) -> [Unit](../-unit/index.md))  
 
 
 

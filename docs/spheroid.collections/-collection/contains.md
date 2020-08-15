@@ -4,11 +4,10 @@
 
 # contains  
  
-Brief description  
 Checks if the specified element is contained in this collection.  
   
   
-abstract operator fun [contains](contains.md)(element: [E](index.md)): Boolean  
+abstract operator fun [contains](contains.md)(element: [E](index.md)): [Boolean](../../spheroid/-boolean/index.md)  
 
 
 

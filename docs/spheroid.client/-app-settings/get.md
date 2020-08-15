@@ -4,7 +4,7 @@
 
 # get  
  
-abstract operator fun [get](get.md)(name: String): Any?  
+abstract operator fun [get](get.md)(name: [String](../../spheroid/-string/index.md)): Any?  
 
 
 

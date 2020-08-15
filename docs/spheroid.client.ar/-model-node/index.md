@@ -10,12 +10,12 @@
   
 |  Name|  Summary| 
 |---|---|
-| [getAnimationController](get-animation-controller.md)| fun [getAnimationController](get-animation-controller.md)(name: String): [AnimationController](../-animation-controller/index.md)  <br>override fun [getAnimationController](../-node/get-animation-controller.md)(animation: [Animation](../-animation/index.md)): [AnimationController](../-animation-controller/index.md)  <br><br><br>
+| [getAnimationController](get-animation-controller.md)| fun [getAnimationController](get-animation-controller.md)(name: [String](../../spheroid/-string/index.md)): [AnimationController](../-animation-controller/index.md)  <br>override fun [getAnimationController](../-node/get-animation-controller.md)(animation: [Animation](../-animation/index.md)): [AnimationController](../-animation-controller/index.md)  <br><br><br>
 | [getAudioController](../-node/get-audio-controller.md)| override fun [getAudioController](../-node/get-audio-controller.md)(audio: [SceneAudio](../-scene-audio/index.md)): [SceneAudioController](../-scene-audio-controller/index.md)  <br><br><br>
 | [onTap](../-node/on-tap.md)| override fun [onTap](../-node/on-tap.md)(callback: () -> Unit)  <br><br><br>
-| [playAnimation](play-animation.md)| fun [playAnimation](play-animation.md)(name: String, loop: Boolean): [AnimationController](../-animation-controller/index.md)  <br>override fun [playAnimation](../-node/play-animation.md)(animation: [Animation](../-animation/index.md), loop: Boolean): [AnimationController](../-animation-controller/index.md)  <br><br><br>
-| [playAudio](../-node/play-audio.md)| override fun [playAudio](../-node/play-audio.md)(audio: [SceneAudio](../-scene-audio/index.md), loop: Boolean): [SceneAudioController](../-scene-audio-controller/index.md)  <br><br><br>
-| toString| open override fun toString(): String  <br><br><br>
+| [playAnimation](play-animation.md)| fun [playAnimation](play-animation.md)(name: [String](../../spheroid/-string/index.md), loop: [Boolean](../../spheroid/-boolean/index.md)): [AnimationController](../-animation-controller/index.md)  <br>override fun [playAnimation](../-node/play-animation.md)(animation: [Animation](../-animation/index.md), loop: [Boolean](../../spheroid/-boolean/index.md)): [AnimationController](../-animation-controller/index.md)  <br><br><br>
+| [playAudio](../-node/play-audio.md)| override fun [playAudio](../-node/play-audio.md)(audio: [SceneAudio](../-scene-audio/index.md), loop: [Boolean](../../spheroid/-boolean/index.md)): [SceneAudioController](../-scene-audio-controller/index.md)  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 
 
 ## Properties  

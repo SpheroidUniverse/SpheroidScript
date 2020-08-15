@@ -4,7 +4,7 @@
 
 # getAnimationController  
  
-fun [getAnimationController](get-animation-controller.md)(name: String): [AnimationController](../-animation-controller/index.md)  
+fun [getAnimationController](get-animation-controller.md)(name: [String](../../spheroid/-string/index.md)): [AnimationController](../-animation-controller/index.md)  
 
 
 

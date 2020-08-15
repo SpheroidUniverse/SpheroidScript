@@ -4,7 +4,7 @@
 
 # playAnimation  
  
-fun [playAnimation](play-animation.md)(name: String, loop: Boolean): [AnimationController](../-animation-controller/index.md)  
+fun [playAnimation](play-animation.md)(name: [String](../../spheroid/-string/index.md), loop: [Boolean](../../spheroid/-boolean/index.md)): [AnimationController](../-animation-controller/index.md)  
 
 
 

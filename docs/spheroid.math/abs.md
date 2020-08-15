@@ -4,7 +4,6 @@
 
 # abs  
  
-Brief description  
 Returns the absolute value of the given value [x]().  
   
   

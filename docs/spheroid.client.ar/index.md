@@ -17,7 +17,7 @@
 | [GeoAnchor](-geo-anchor/index.md)| interface [GeoAnchor](-geo-anchor/index.md)  <br><br><br>
 | [Location](-location/index.md)| object [Location](-location/index.md)  <br><br><br>
 | [Map](-map/index.md)| object [Map](-map/index.md)  <br><br><br>
-| [MapMarker](-map-marker/index.md)| class [MapMarker](-map-marker/index.md)(**location**: [LatLng](../spheroid/-lat-lng/index.md))  <br><br><br>
+| [MapMarker](-map-marker/index.md)| class [MapMarker](-map-marker/index.md)(**location**: [LatLng](../spheroid/-lat-lng/index.md),**icon**: [Image](../spheroid.client.ui/-image/index.md))  <br><br><br>
 | [MapMarkerCollection](-map-marker-collection/index.md)| interface [MapMarkerCollection](-map-marker-collection/index.md) : [MutableCollection](../spheroid.collections/-mutable-collection/index.md)  <br><br><br>
 | [Model](-model/index.md)| class [Model](-model/index.md)(**source**: [Source](../spheroid/-source/index.md)) : [Loadable](../spheroid/-loadable/index.md)  <br><br><br>
 | [ModelNode](-model-node/index.md)| class [ModelNode](-model-node/index.md) : [Node](-node/index.md)  <br><br><br>

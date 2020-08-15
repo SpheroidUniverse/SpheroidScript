@@ -4,7 +4,6 @@
 
 # cos  
  
-Brief description  
 Computes the cosine of the angle [x]() given in radians.  
   
   

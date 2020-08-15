@@ -4,7 +4,6 @@
 
 # sqrt  
  
-Brief description  
 Computes the positive square root of the value [x]().  
   
   

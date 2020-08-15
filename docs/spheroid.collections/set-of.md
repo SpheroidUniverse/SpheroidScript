@@ -4,7 +4,6 @@
 
 # setOf  
  
-Brief description  
 Returns a new read-only set with the given elements. Elements of the set are iterated in the order they were specified.  
   
   

@@ -4,7 +4,6 @@
 
 # mutableSetOf  
  
-Brief description  
 Returns a new MutableSet with the given elements. Elements of the set are iterated in the order they were specified.  
   
   

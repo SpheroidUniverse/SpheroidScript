@@ -4,11 +4,10 @@
 
 # get  
  
-Brief description  
 Returns the element at the specified index in the list.  
   
   
-abstract operator fun [get](get.md)(index: Int): [E](index.md)  
+abstract operator fun [get](get.md)(index: [Long](../../spheroid/-long/index.md)): [E](index.md)  
 
 
 

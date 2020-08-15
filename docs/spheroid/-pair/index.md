@@ -19,7 +19,7 @@ class [Pair](index.md)<[A](index.md) : Any?, [B](index.md) : Any?> (**first**: [
   
 |  Name|  Summary| 
 |---|---|
-| toString| open override fun toString(): String  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 
 
 ## Properties  

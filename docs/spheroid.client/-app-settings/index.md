@@ -10,7 +10,7 @@
   
 |  Name|  Summary| 
 |---|---|
-| [get](get.md)| abstract operator fun [get](get.md)(name: String): Any?  <br><br><br>
-| [set](set.md)| abstract operator fun [set](set.md)(name: String, value: Any?)  <br><br><br>
-| toString| open override fun toString(): String  <br><br><br>
+| [get](get.md)| abstract operator fun [get](get.md)(name: [String](../../spheroid/-string/index.md)): Any?  <br><br><br>
+| [set](set.md)| abstract operator fun [set](set.md)(name: [String](../../spheroid/-string/index.md), value: Any?)  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 

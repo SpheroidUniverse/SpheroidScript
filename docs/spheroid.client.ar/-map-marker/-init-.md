@@ -4,7 +4,7 @@
 
 # <init>  
  
-fun [<init>](-init-.md)(location: [LatLng](../../spheroid/-lat-lng/index.md))  
+fun [<init>](-init-.md)(location: [LatLng](../../spheroid/-lat-lng/index.md), icon: [Image](../../spheroid.client.ui/-image/index.md))  
 
 
 

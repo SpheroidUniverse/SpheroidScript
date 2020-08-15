@@ -4,7 +4,7 @@
 
 # play  
  
-fun [play](play.md)(loop: Boolean)  
+fun [play](play.md)(loop: [Boolean](../../spheroid/-boolean/index.md))  
 
 
 

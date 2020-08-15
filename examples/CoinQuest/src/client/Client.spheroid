@@ -1,7 +1,8 @@
 val geoAnchor = GeoAnchor.default
 val coinModel = Model(source = Source("/assets/coin_gold.glb"))
 val coinAudio = Audio(source = Source("/assets/jump.ogg"))
-val coinIcon = Image(source = Source("/assets/coin.png"))
+val notificationIcon = Image(source = Source("/assets/notification_icon_gold.png"))
+val mapIcon = Image(source = Source("/assets/map_icon_gold.png"))
 val coinIds = mutableSetOf()
 var currentBalance
 var isLocationCorrect = false
@@ -9,8 +10,8 @@ var isLocationCorrect = false
 fun main() {
     println("Demo Coin Quest is started")
 
-    loadIcon {
-        println("Icon is loaded")
+    loadNotificationIcon {
+        println("Icons are loaded")
 
         Server.action("startup") { response, error ->
             if (error != null)
@@ -39,7 +40,7 @@ fun main() {
     }
 
     Location.onUninit {
-        println("Location is uninitialized")        
+        println("Location is uninitialized")
         geoAnchor.children.clear()
         Map.markers.clear()
         coinIds.clear()
@@ -51,9 +52,9 @@ fun updateCoins() {
     if (!isLocationCorrect) 
         return
     
-    Server.action("getCoins") { response, error ->        
+    Server.action("getCoins") { response, error ->
         if (error != null)
-            handleError(error)        
+            handleError(error)
         else {
             println("${response.coins.size} coins have been loaded")
 
@@ -66,17 +67,17 @@ fun updateCoins() {
 fun setBalance(newBalance) {
     if (currentBalance != newBalance) {
         currentBalance = newBalance
-        coinIcon.load {
+        notificationIcon.load {
             println("Notification: $newBalance coins")
             Notification.show(icon = this, text = newBalance.toString())
         }
     }
 }
 
-fun loadIcon(callback) {
-    coinIcon.load { success, error ->
+fun loadNotificationIcon(callback) {
+    notificationIcon.load { success, error ->
         if (!success)
-            handleError(Exception("Failed to load coin icon: $error"))
+            handleError(Exception("Failed to load notification icon: $error"))
 
         callback.invoke()
     }
@@ -91,7 +92,12 @@ fun loadAssets(callback) {
             if (!success)
                 handleError(Exception("Failed to load coin audio: $error"))
 
-            callback.invoke()
+            mapIcon.load { success, error ->
+                if (!success)
+                    handleError(Exception("Failed to load map icon: $error"))
+
+                callback.invoke()
+            }
         }
     }
 }
@@ -109,7 +115,7 @@ fun updateCoin(coin) {
     node.location = coin.location
     geoAnchor.children.add(node)
 
-    val marker = MapMarker(location = coin.location)
+    val marker = MapMarker(location = coin.location, icon = mapIcon)
     Map.markers.add(marker)
 
     // Idle animation

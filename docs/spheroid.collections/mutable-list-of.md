@@ -4,7 +4,6 @@
 
 # mutableListOf  
  
-Brief description  
 Returns a new MutableList with the given elements.  
   
   

@@ -4,7 +4,7 @@
 
 # playAudio  
  
-fun [playAudio](play-audio.md)(audio: [SceneAudio](../-scene-audio/index.md), loop: Boolean): [SceneAudioController](../-scene-audio-controller/index.md)  
+fun [playAudio](play-audio.md)(audio: [SceneAudio](../-scene-audio/index.md), loop: [Boolean](../../spheroid/-boolean/index.md)): [SceneAudioController](../-scene-audio-controller/index.md)  
 
 
 

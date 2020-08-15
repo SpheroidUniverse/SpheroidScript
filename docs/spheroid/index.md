@@ -32,6 +32,7 @@
 | [Source](-source/index.md)| class [Source](-source/index.md)(**path**: [String](-string/index.md))  <br><br><br>
 | [String](-string/index.md)| class [String](-string/index.md)  <br><br><br>
 | [TimeInterval](-time-interval/index.md)| class [TimeInterval](-time-interval/index.md)(**days**: [Number](-number/index.md)?,**hours**: [Number](-number/index.md)?,**minutes**: [Number](-number/index.md)?,**seconds**: [Number](-number/index.md)?,**milliseconds**: [Number](-number/index.md)?)  <br><br><br>
+| [Unit](-unit/index.md)| object [Unit](-unit/index.md)  <br><br><br>
 | [UUID](-u-u-i-d/index.md)| class [UUID](-u-u-i-d/index.md)(**value**: [String](-string/index.md))  <br><br><br>
 | [Vector3](-vector3/index.md)| class [Vector3](-vector3/index.md)(**x**: [Number](-number/index.md),**y**: [Number](-number/index.md),**z**: [Number](-number/index.md))  <br><br><br>
 
@@ -40,8 +41,8 @@
   
 |  Name|  Summary| 
 |---|---|
-| [check](check.md)| Throws an [IllegalStateException](-illegal-state-exception/index.md) if the [value]() is false.  <br>fun [check](check.md)(value: [Boolean](-boolean/index.md))  <br><br><br>Throws an [IllegalStateException](-illegal-state-exception/index.md) with the result of calling [lazyMessage]() if the [value]() is false.  <br>fun [check](check.md)(value: [Boolean](-boolean/index.md), lazyMessage: () -> [Any](-any/index.md))  <br><br><br>
+| [check](check.md)| Throws an [IllegalStateException](-illegal-state-exception/index.md) if the [value]() is false.  <br>fun [check](check.md)(value: [Boolean](-boolean/index.md)): [Unit](-unit/index.md)  <br><br><br>Throws an [IllegalStateException](-illegal-state-exception/index.md) with the result of calling [lazyMessage]() if the [value]() is false.  <br>fun [check](check.md)(value: [Boolean](-boolean/index.md), lazyMessage: () -> [Any](-any/index.md))  <br><br><br>
 | [error](error.md)| Throws an [IllegalStateException](-illegal-state-exception/index.md).  <br>fun [error](error.md)()  <br><br><br>Throws an [IllegalStateException](-illegal-state-exception/index.md) with the given [message]().  <br>fun [error](error.md)(message: [Any](-any/index.md))  <br><br><br>
-| [repeat](repeat.md)| Executes the given function [action]() specified number of [times]().A zero-based index of current iteration is passed as a parameter to [action]().  <br>fun [repeat](repeat.md)(times: Int, action: (Int) -> Unit)  <br><br><br>
-| [require](require.md)| Throws an [IllegalArgumentException](-illegal-argument-exception/index.md) if the [value]() is false.  <br>fun [require](require.md)(value: [Boolean](-boolean/index.md))  <br><br><br>Throws an [IllegalArgumentException](-illegal-argument-exception/index.md) with the result of calling [lazyMessage]() if the [value]() is false.  <br>fun [require](require.md)(value: [Boolean](-boolean/index.md), lazyMessage: () -> [Any](-any/index.md))  <br><br><br>
+| [repeat](repeat.md)| Executes the given function [action]() specified number of [times]().A zero-based index of current iteration is passed as a parameter to [action]().  <br>fun [repeat](repeat.md)(times: [Long](../spheroid/-long/index.md), action: ([Long](../spheroid/-long/index.md)) -> [Unit](-unit/index.md))  <br><br><br>
+| [require](require.md)| Throws an [IllegalArgumentException](-illegal-argument-exception/index.md) if the [value]() is false.  <br>fun [require](require.md)(value: [Boolean](-boolean/index.md)): [Unit](-unit/index.md)  <br><br><br>Throws an [IllegalArgumentException](-illegal-argument-exception/index.md) with the result of calling [lazyMessage]() if the [value]() is false.  <br>fun [require](require.md)(value: [Boolean](-boolean/index.md), lazyMessage: () -> [Any](-any/index.md)): [Unit](-unit/index.md)  <br><br><br>
 

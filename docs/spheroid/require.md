@@ -4,19 +4,17 @@
 
 # require  
  
-Brief description  
 Throws an [IllegalArgumentException](-illegal-argument-exception/index.md) if the [value]() is false.  
   
   
-fun [require](require.md)(value: [Boolean](-boolean/index.md))  
+fun [require](require.md)(value: [Boolean](-boolean/index.md)): [Unit](-unit/index.md)  
 
 
  
-Brief description  
 Throws an [IllegalArgumentException](-illegal-argument-exception/index.md) with the result of calling [lazyMessage]() if the [value]() is false.  
   
   
-fun [require](require.md)(value: [Boolean](-boolean/index.md), lazyMessage: () -> [Any](-any/index.md))  
+fun [require](require.md)(value: [Boolean](-boolean/index.md), lazyMessage: () -> [Any](-any/index.md)): [Unit](-unit/index.md)  
 
 
 

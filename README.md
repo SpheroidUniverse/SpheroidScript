@@ -23,8 +23,9 @@ Spheroid Script has the following advantages:
 
 - includes Spheroid SQL: built-in database query language
 
-Spheroid Script example with tutorial:
-[Coin Quest](examples/CoinQuest/README.md)
+Please, see the Spheroid Script tutorials and documentation:
 
-Please find the Spheroid Script reference here:
-https://spheroiduniverse.github.io/SpheroidScript/
+- [Hello World](./examples/HelloWorld/README.md)
+- [Create a simple geo-based AR game](examples/CoinQuest/README.md)
+- [Spheroid Script syntax](./docs/basic-syntax.md)
+- [Spheroid Script reference](https://spheroiduniverse.github.io/SpheroidScript/)

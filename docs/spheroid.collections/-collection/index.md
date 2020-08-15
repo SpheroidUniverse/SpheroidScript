@@ -12,9 +12,9 @@ interface [Collection](index.md)<[E](index.md) : Any?>  : [Iterable](../-iterabl
   
 |  Name|  Summary| 
 |---|---|
-| [contains](contains.md)| Checks if the specified element is contained in this collection.  <br>abstract operator fun [contains](contains.md)(element: [E](index.md)): Boolean  <br><br><br>
+| [contains](contains.md)| Checks if the specified element is contained in this collection.  <br>abstract operator fun [contains](contains.md)(element: [E](index.md)): [Boolean](../../spheroid/-boolean/index.md)  <br><br><br>
 | [isEmpty](is-empty.md)| Returns true if the collection is empty (contains no elements), false otherwise.  <br>abstract fun [isEmpty](is-empty.md)(): [Boolean](../../spheroid/-boolean/index.md)  <br><br><br>
-| toString| open override fun toString(): String  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 
 
 ## Properties  

@@ -13,9 +13,9 @@
 | [getAnimationController](get-animation-controller.md)| fun [getAnimationController](get-animation-controller.md)(animation: [Animation](../-animation/index.md)): [AnimationController](../-animation-controller/index.md)  <br><br><br>
 | [getAudioController](get-audio-controller.md)| fun [getAudioController](get-audio-controller.md)(audio: [SceneAudio](../-scene-audio/index.md)): [SceneAudioController](../-scene-audio-controller/index.md)  <br><br><br>
 | [onTap](on-tap.md)| fun [onTap](on-tap.md)(callback: () -> Unit)  <br><br><br>
-| [playAnimation](play-animation.md)| fun [playAnimation](play-animation.md)(animation: [Animation](../-animation/index.md), loop: Boolean): [AnimationController](../-animation-controller/index.md)  <br><br><br>
-| [playAudio](play-audio.md)| fun [playAudio](play-audio.md)(audio: [SceneAudio](../-scene-audio/index.md), loop: Boolean): [SceneAudioController](../-scene-audio-controller/index.md)  <br><br><br>
-| toString| open override fun toString(): String  <br><br><br>
+| [playAnimation](play-animation.md)| fun [playAnimation](play-animation.md)(animation: [Animation](../-animation/index.md), loop: [Boolean](../../spheroid/-boolean/index.md)): [AnimationController](../-animation-controller/index.md)  <br><br><br>
+| [playAudio](play-audio.md)| fun [playAudio](play-audio.md)(audio: [SceneAudio](../-scene-audio/index.md), loop: [Boolean](../../spheroid/-boolean/index.md)): [SceneAudioController](../-scene-audio-controller/index.md)  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 
 
 ## Properties  

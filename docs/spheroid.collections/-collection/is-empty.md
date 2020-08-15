@@ -4,7 +4,6 @@
 
 # isEmpty  
  
-Brief description  
 Returns true if the collection is empty (contains no elements), false otherwise.  
   
   

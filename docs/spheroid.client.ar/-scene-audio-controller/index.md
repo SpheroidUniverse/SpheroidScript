@@ -10,7 +10,7 @@
   
 |  Name|  Summary| 
 |---|---|
-| [play](play.md)| abstract fun [play](play.md)(loop: Boolean)  <br><br><br>
+| [play](play.md)| abstract fun [play](play.md)(loop: [Boolean](../../spheroid/-boolean/index.md))  <br><br><br>
 | [stop](stop.md)| abstract fun [stop](stop.md)()  <br><br><br>
-| toString| open override fun toString(): String  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 

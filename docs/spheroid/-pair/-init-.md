@@ -4,7 +4,6 @@
 
 # <init>  
  
-Brief description  
 Creates a new instance of Pair.  
   
   

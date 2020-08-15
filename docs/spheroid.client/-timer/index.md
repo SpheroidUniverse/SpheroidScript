@@ -18,5 +18,5 @@
 |  Name|  Summary| 
 |---|---|
 | [cancel](cancel.md)| abstract fun [cancel](cancel.md)()  <br><br><br>
-| toString| open override fun toString(): String  <br><br><br>
+| toString| open override fun toString(): [String](../../spheroid/-string/index.md)  <br><br><br>
 

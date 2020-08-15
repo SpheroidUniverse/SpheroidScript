@@ -4,7 +4,6 @@
 
 # clear  
  
-Brief description  
 Removes all elements from this collection.  
   
   

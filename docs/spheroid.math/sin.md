@@ -4,7 +4,6 @@
 
 # sin  
  
-Brief description  
 Computes the sine of the angle [x]() given in radians.  
   
   

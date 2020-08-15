@@ -4,7 +4,6 @@
 
 # add  
  
-Brief description  
 Adds the specified element to the collection.  
   
 

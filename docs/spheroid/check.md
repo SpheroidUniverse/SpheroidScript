@@ -4,15 +4,13 @@
 
 # check  
  
-Brief description  
 Throws an [IllegalStateException](-illegal-state-exception/index.md) if the [value]() is false.  
   
   
-fun [check](check.md)(value: [Boolean](-boolean/index.md))  
+fun [check](check.md)(value: [Boolean](-boolean/index.md)): [Unit](-unit/index.md)  
 
 
  
-Brief description  
 Throws an [IllegalStateException](-illegal-state-exception/index.md) with the result of calling [lazyMessage]() if the [value]() is false.  
   
   
