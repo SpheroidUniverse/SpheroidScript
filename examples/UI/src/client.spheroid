@@ -1,0 +1,91 @@
+fun main() {
+    MainMenu {
+        Container(top = 20dp, left = 20dp) {
+            Image(source = Source("/assets/menu.png"), width = 40dp).onClick {
+                mainPage().navigate()
+            }
+        }
+    }
+}
+
+val leftPadding = 18dp
+val dividerColor = Color(rgba = 0x00000066)
+val buttonColor = Color(rgb = 0x007AFF)
+val activeColor = Color(rgba = 0x00000022)
+
+fun mainPage() =
+    Page(
+        title = "UI Components",
+        backgroundColor = Color(rgb = 0xEEEEEE),
+        navigationBarBackgroundColor = Color(rgb = 0xEEEEEE), 
+        navigationBarForegroundColor = Color(rgb = 0x000000)
+    ) {
+        Container(backgroundColor = Color(rgb = 0xFFFFFF)) {
+            Vertical(spacing = 0, left = 0, right = 0) {
+                Container { Container(height = 1px, backgroundColor = dividerColor) }
+
+                Container(height = 44dp) {
+                    Text(text = "Button", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, buttonPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Container", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, containerPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Dialog", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, dialogPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Form", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, formPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Horizontal", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, horizontalPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Image", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, imagePage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Loader", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, loaderPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Page", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, pagePage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Text", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, textPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "TextField", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, textFieldPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Vertical", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick { doClick(this, verticalPage()) }
+                Container { Container(height = 1px, backgroundColor = dividerColor) }
+            }
+        }
+    }
+
+fun doClick(container, page) {
+    container.backgroundColor = activeColor
+    Timer.schedule(delay = TimeInterval(seconds = 0.5)) {
+        container.backgroundColor = null
+    }
+    page.navigate()
+}

@@ -1,0 +1,56 @@
+val textColor = Color(rgba = 0x00000077)
+
+fun textPage() =
+    Page(title = "Text", backgroundColor = Color(rgb = 0xFFFFFF)) {
+        Vertical(top = 8dp, left = 18dp, right = 18dp) {
+            Container(height = commentHeight) { Text(text = "1. Default", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                Text(text = "Text")
+            }
+            Container(height = commentHeight) { Text(text = "2. textSize = 24dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                Text(text = "Text", textSize = 24dp)
+            }
+            Container(height = commentHeight) { Text(text = "3. textColor = Color(rgb = 0x34C759)", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                Text(text = "Text", textColor = Color(rgb = 0x34C759))
+            }
+            Container(height = commentHeight) { Text(text = "4. textAlign = \"center\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                Text(text = "Text. First line.\nSecond line.", textAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "5. fontWeight = \"bold\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                Text(text = "Text", fontWeight = "bold")
+            }
+            Container(height = commentHeight) { Text(text = "6. onClick { println(\"You tapped a text!\") }", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                Text(text = "Text").onClick {
+                    println("You tapped a text!")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "7. width = 120dp, height = 60dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                    Text(text = "This is a text message.", horizontalAlign = "center", width = 120dp, height = 50dp)
+                }
+            }
+            Container(height = commentHeight) { Text(text = "8. horizontalAlign = \"center\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                Text(text = "Text", horizontalAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "9. left = 12dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                Text(text = "Text", left = 12dp)
+            }
+            Container(height = commentHeight) { Text(text = "10. verticalAlign = \"center\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 70dp) {
+                Text(text = "Text", verticalAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "11. bottom = 8dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 70dp) {
+                Text(text = "Text", bottom = 8dp)
+            }
+            Container(height = 24dp)
+        }
+    }

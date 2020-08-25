@@ -1,4 +1,4 @@
-# Quickstart
+# Quickstart of Coin Quest — a geo-based AR game
 
 This quickstart will take you through the steps to create a simple geo-based AR game powered by the Spheroid Universe Platform.
 
@@ -109,7 +109,7 @@ If you don't see the four info messages, or you see error messages instead, chec
 
 Now as you have your app built and published, it's time to run it on your mobile phone.
 
-Download the XRHub Android mobile app either by [following the Google Play link](https://play.google.com/store/apps/details?id=io.spheroid.spheroidandroid) or by scanning the QR code:
+Download the XR Hub Android mobile app either by [following the Google Play link](https://play.google.com/store/apps/details?id=io.spheroid.spheroidandroid) or by scanning the QR code:
 
 ![](../../docs/images/coin-quest/15---XR-Hub-QR.png)
 
@@ -118,9 +118,9 @@ Download the XRHub Android mobile app either by [following the Google Play link]
 | --- | --- | --- | --- |
 | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) |
 
-Currently, XRHub works on the Android devices that [support ARCore](https://developers.google.com/ar/discover/supported-devices) only. iOS version of the app will be released soon.
+Currently, XR Hub works on the Android devices that [support ARCore](https://developers.google.com/ar/discover/supported-devices) only. iOS version of the app will be released soon.
 
-Launch the XRHub app on your phone.
+Launch the XR Hub app on your phone.
 
 
 | ![](../../docs/images/coin-quest/18---google-app-2.png) | ![](../../docs/images/coin-quest/19---xrhub-splash-1.png) | ![](../../docs/images/coin-quest/20---xrhub-splash-2.png) | ![](../../docs/images/coin-quest/21---xrhub-splash-3.png) |
@@ -139,7 +139,7 @@ When you're authorized, swipe right through the list of worlds to find the world
 | --- | --- | --- | --- |
 | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) |
 
-When you've found your world, tap the "Launch" button, and you will see the coins on the screen. Congratulations, you have successfully run your app in the XRHub! Collect some coins and see how the value on the counter changes after you tap on each coin. See the logs from the app in real time in the IDE in the "Client" and "Server" tabs in the bottom pane.
+When you've found your world, tap the "Launch" button, and you will see the coins on the screen. Congratulations, you have successfully run your app in the XR Hub! Collect some coins and see how the value on the counter changes after you tap on each coin. See the logs from the app in real time in the IDE in the "Client" and "Server" tabs in the bottom pane.
 
 ## Troubleshooting
 
@@ -154,6 +154,8 @@ We'll get familiar with the Spheroid Script – the Platform language.
 We'll talk about the project structure and discuss some key concepts e.g. dividing code into a client-side part, and a server-side part.
 Finally, we'll learn the basics of persisting data in a cloud database using the Spheroid SQL.
 
-Until the next tutorial, you can already start exploring Spheroid Script by yourself using the following documents:
-* [Spheroid Script syntax](../../docs/basic-syntax.md)
-* [Spheroid Script reference](https://spheroiduniverse.github.io/SpheroidScript/)
+## What's next?
+
+- [More examples](..)
+- [Spheroid Script Documentation](https://spheroiduniverse.github.io/SpheroidScript/)
+- [Got a question? Submit an issue on GitHub](../../docs/submit-an-issue.md)

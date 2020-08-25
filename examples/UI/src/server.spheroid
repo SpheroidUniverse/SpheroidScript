@@ -1,0 +1,11 @@
+@Action
+fun formAction(request) {
+    println("Call formAction")
+    return "This is an answer from server. Field 1 value was: \"${request.field1}\""
+}
+
+@Action
+fun loaderAction(request) {
+    println("Call loaderAction")
+    return "This is an answer from server.\nRequest was: \"$request\""
+}

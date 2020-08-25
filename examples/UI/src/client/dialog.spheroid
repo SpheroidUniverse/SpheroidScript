@@ -1,0 +1,28 @@
+fun dialogPage() =
+    Page(title = "Dialog", backgroundColor = Color(rgb = 0xFFFFFF)) {
+        Vertical(top = 8dp, left = 18dp, right = 18dp) {
+            Container(height = commentHeight) { Text(text = "1. title = \"Title\", message = \"Message\"", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Button(text = "Open dialog 1", width = 120dp).onClick {
+                    openDialog1()
+                }
+            }
+            Container(height = commentHeight) { Text(text = "2. open { println(\"You closed dialog 2!\") }", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Button(text = "Open dialog 2", width = 120dp).onClick {
+                    openDialog2()
+                }
+            }
+            Container(height = 24dp)
+        }
+    }
+
+fun openDialog1() {
+    Dialog(title = "Dialog 1", message = "Message of dialog 1.").open()
+}
+
+fun openDialog2() {
+    Dialog(title = "Dialog 2", message = "Message of dialog 2.").open {
+        println("You closed dialog 2!")
+    }
+}

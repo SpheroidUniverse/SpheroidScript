@@ -1,0 +1,26 @@
+fun formPage() =
+    Page(title = "Form", backgroundColor = Color(rgb = 0xFFFFFF)) {
+        Vertical(top = 8dp, left = 18dp, right = 18dp) {
+            Container(height = commentHeight) { Text(text = "1. Basic", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Form(action = "formAction") { form ->
+                    Vertical {
+                        Container {
+                            TextField(name = "field1", width = 130dp, placeholder = "Field 1")
+                        }
+                        Container {
+                            Button(text = "Submit form", width = 130dp).onClick {
+                                form.submit { result, error ->
+                                    if (error != null)
+                                        println(error.toString())
+                                    else
+                                        println(result)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            Container(height = 24dp)
+        }
+    }

@@ -1,0 +1,92 @@
+fun textFieldPage() =
+    Page(title = "TextField", backgroundColor = Color(rgb = 0xFFFFFF)) {
+        Vertical(top = 8dp, left = 18dp, right = 18dp) {
+            Container(height = commentHeight) { Text(text = "1. Default", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField()
+            }
+            Container(height = commentHeight) { Text(text = "2. width = 200dp, height = 60dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, height = 60dp)
+            }
+            Container(height = commentHeight) { Text(text = "3. value = \"TextField\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField")
+            }
+            Container(height = commentHeight) { Text(text = "4. backgroundColor = Color(rgb = 0xFFFF00)", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", backgroundColor = Color(rgb = 0xFFFF00))
+            }
+            Container(height = commentHeight) { Text(text = "5. borderWidth = 2dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", borderWidth = 3dp)
+            }
+            Container(height = commentHeight) { Text(text = "6. borderColor = Color(rgb = 0xFF0000)", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", borderColor = Color(rgb = 0xFF0000))
+            }
+            Container(height = commentHeight) { Text(text = "7. cornerRadius = 22dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", cornerRadius = 22dp)
+            }
+            Container(height = commentHeight) { Text(text = "8. placeholder = \"Placeholder\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, placeholder = "Placeholder")
+            }
+            Container(height = commentHeight) { Text(text = "9. placeholderColor = Color(rgba = 0xFF000066)", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, placeholder = "Placeholder", placeholderColor = Color(rgba = 0xFF000066))
+            }
+            Container(height = commentHeight) { Text(text = "10. textSize = 24dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", textSize = 24dp)
+            }
+            Container(height = commentHeight) { Text(text = "11. textColor = Color(rgb = 0x34C759)", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", textColor = Color(rgb = 0x34C759))
+            }
+            Container(height = commentHeight) { Text(text = "12. tintColor = Color(rgb = 0xFF00FF)", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", tintColor = Color(rgb = 0xFF00FF))
+            }
+            Container(height = commentHeight) { Text(text = "13. fontWeight = \"bold\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", fontWeight = "bold")
+            }
+            Container(height = commentHeight) { Text(text = "14. padding = 2dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", padding = 2dp)
+            }
+            Container(height = commentHeight) { Text(text = "15. isEmail = true", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "mail@example.com", isEmail = true)
+            }
+            Container(height = commentHeight) { Text(text = "16. isSecure = true", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField", isSecure = true)
+            }
+            Container(height = commentHeight) { Text(text = "17. onFocusChange { isOnFocus -> println(...) }", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container {
+                TextField(width = 200dp, value = "TextField").onFocusChange { isOnFocus ->
+                    println("TextField is on focus: " + isOnFocus)
+                }
+            }
+            Container(height = commentHeight) { Text(text = "18. horizontalAlign = \"center\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                TextField(width = 200dp, value = "TextField", horizontalAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "19. left = 12dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                TextField(width = 200dp, value = "TextField", left = 12dp)
+            }
+            Container(height = commentHeight) { Text(text = "20. verticalAlign = \"center\"", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 90dp) {
+                TextField(width = 200dp, value = "TextField", verticalAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "21. bottom = 8dp", bottom = 0, textSize = commentTextSize, textColor = textColor) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 90dp) {
+                TextField(width = 200dp, value = "TextField", bottom = 8dp)
+            }
+            Container(height = 24dp)
+        }
+    }

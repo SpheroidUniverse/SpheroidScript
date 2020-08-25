@@ -1,0 +1,51 @@
+val commentHeight = 30dp
+val commentTextSize = 14sp
+
+fun buttonPage() =
+    Page(title = "Button", backgroundColor = Color(rgb = 0xFFFFFF)) {
+        Vertical(top = 8dp, left = 18dp, right = 18dp) {
+            Container(height = commentHeight) { Text(text = "1. Default", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Button(text = "Button")
+            }
+            Container(height = commentHeight) { Text(text = "2. onClick { println(\"You tapped a button!\") }", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Button(text = "Button").onClick { 
+                    println("You tapped a button!")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "3. backgroundColor = Color(rgb = 0x34C759)", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Button(text = "Button", backgroundColor = Color(rgb = 0x34C759))
+            }
+            Container(height = commentHeight) { Text(text = "4. cornerRadius = 22dp", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Button(text = "Button", cornerRadius = 22dp)
+            }
+            Container(height = commentHeight) { Text(text = "5. textAlign = \"left\"", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Button(text = "Button", textAlign = "left")
+            }
+            Container(height = commentHeight) { Text(text = "6. width = 150dp, height = 60dp", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Button(text = "Button", width = 150dp, height = 60dp)
+            }
+            Container(height = commentHeight) { Text(text = "7. horizontalAlign = \"center\"", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                Button(text = "Button", horizontalAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "8. left = 12dp", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                Button(text = "Button", left = 12dp)
+            }
+            Container(height = commentHeight) { Text(text = "9. verticalAlign = \"center\"", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 90dp) {
+                Button(text = "Button", verticalAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "10. bottom = 8dp", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 90dp) {
+                Button(text = "Button", bottom = 8dp)
+            }
+            Container(height = 24dp)
+        }
+    }

@@ -1,7 +1,7 @@
-# Basic Syntax
+# Spheroid Script Syntax Overview
 
 From this document, you'll learn the basics of the Spheroid Script. You can run the examples by creating 
-a simple [Hello World](../examples/HelloWorld/README.md) app and replacing its code with the code from the examples.
+a simple [Hello World](https://github.com/SpheroidUniverse/SpheroidScript/tree/master/examples/HelloWorld) app and replacing its code with the code from the examples.
 
 Try it out!
 
@@ -182,8 +182,7 @@ fun main() {
 }
 ```
 
-## Other tutorials and documentation
+## Related Links
 
-* [Hello World](../examples/HelloWorld/README.md)
-* [Create a simple geo-based AR game](../examples/CoinQuest/README.md)
-* [Spheroid Script reference](https://spheroiduniverse.github.io/SpheroidScript/)
+- [Hello, World!](https://github.com/SpheroidUniverse/SpheroidScript/tree/master/examples/HelloWorld)
+- [Got a question? Submit an issue on GitHub](submit-an-issue.md)

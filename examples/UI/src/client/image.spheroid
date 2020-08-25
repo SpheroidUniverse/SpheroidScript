@@ -1,0 +1,36 @@
+fun imagePage() =
+    Page(title = "Image", backgroundColor = Color(rgb = 0xFFFFFF)) {
+        Vertical(top = 8dp, left = 18dp, right = 18dp) {
+            Container(height = commentHeight) { Text(text = "1. Default", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Image(source = Source("/assets/image.png"))
+            }
+            Container(height = commentHeight) { Text(text = "2. width = 100dp, height = 50dp", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Image(source = Source("/assets/image.png"), width = 100dp, height = 50dp)
+            }
+            Container(height = commentHeight) { Text(text = "3. onClick { println(\"You tapped an image!\") }", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Image(source = Source("/assets/image.png"), width = 100dp).onClick {
+                    println("You tapped an image!")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "4. horizontalAlign = \"center\"", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                Image(source = Source("/assets/image.png"), width = 100dp, horizontalAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "5. left = 12dp", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                Image(source = Source("/assets/image.png"), width = 100dp, left = 12dp)
+            }
+            Container(height = commentHeight) { Text(text = "6. verticalAlign = \"center\"", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 100dp) {
+                Image(source = Source("/assets/image.png"), width = 100dp, verticalAlign = "center")
+            }
+            Container(height = commentHeight) { Text(text = "7. bottom = 8dp", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 100dp) {
+                Image(source = Source("/assets/image.png"), width = 100dp, bottom = 8dp)
+            }
+            Container(height = 24dp)
+        }
+    }

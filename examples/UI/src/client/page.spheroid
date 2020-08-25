@@ -1,0 +1,52 @@
+fun pagePage() =
+    Page(
+        title = "Page",
+        backgroundColor = Color(rgb = 0xEEEEEE),
+        navigationBarBackgroundColor = Color(rgb = 0xEEEEEE), 
+        navigationBarForegroundColor = Color(rgb = 0x000000)
+    ) {
+        Container(backgroundColor = Color(rgb = 0xFFFFFF)) {
+            Vertical(spacing = 0, left = 0, right = 0) {
+                Container { Container(height = 1px, backgroundColor = dividerColor) }
+
+                Container(height = 44dp) {
+                    Text(text = "Default Page", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick {
+                    defaultPagePage().navigate()
+                }
+                Container { Container(height = 1px, backgroundColor = dividerColor, left = leftPadding) }
+
+                Container(height = 44dp) {
+                    Text(text = "Colored Page", textColor = buttonColor, left = leftPadding, verticalAlign = "center")
+                }.onClick {
+                    coloredPagePage().navigate()
+                }
+                Container { Container(height = 1px, backgroundColor = dividerColor) }
+            }
+        }
+    }
+
+fun defaultPagePage() =
+    Page(title = "Default Page") { page ->
+        Button(text = "Go Back", top = 18dp, left = 18dp).onClick { 
+            page.back()
+        }
+        Button(text = "Go Back Twice", width = 170dp, top = 70dp, left = 18dp).onClick { 
+            page.back(2)
+        }
+    }
+
+fun coloredPagePage() =
+    Page(
+        title = "Colored Page",
+        backgroundColor = Color(rgb = 0xFFFF00),
+        navigationBarBackgroundColor = Color(rgb = 0x00FFFF), 
+        navigationBarForegroundColor = Color(rgb = 0xFF00FF)
+    ) { page ->
+        Button(text = "Go Back", top = 18dp, left = 18dp).onClick { 
+            page.back()
+        }
+        Button(text = "Go Back Twice", width = 170dp, top = 70dp, left = 18dp).onClick { 
+            page.back(2)
+        }
+    }

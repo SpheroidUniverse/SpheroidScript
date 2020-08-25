@@ -1,0 +1,21 @@
+fun loaderPage() =
+    Page(title = "Loader", backgroundColor = Color(rgb = 0xFFFFFF)) {
+        Loader(action = "loaderAction", request = "data") { loader ->
+            Result { result ->
+                println(result)
+                Vertical(top = 8dp, left = 18dp, right = 18dp) {
+                    Container {
+                        Text(text = result)
+                    }
+                    Container {
+                        Button(text = "Reload").onClick {
+                            loader.reload()
+                        }
+                    }
+                }
+            }
+            Error { error ->
+                println(error.toString())
+            }
+        }
+    }

@@ -1,0 +1,19 @@
+{
+  "client": [
+    "./client.spheroid",
+    "./client/button.spheroid",
+    "./client/container.spheroid",
+    "./client/dialog.spheroid",
+    "./client/form.spheroid",
+    "./client/horizontal.spheroid",
+    "./client/image.spheroid",
+    "./client/loader.spheroid",
+    "./client/page.spheroid",
+    "./client/text.spheroid",
+    "./client/textField.spheroid",
+    "./client/vertical.spheroid"
+  ],
+  "server": [
+    "./server.spheroid"
+  ]
+}

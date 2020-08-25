@@ -98,7 +98,7 @@ If you don't see the two info messages, or you see error messages instead, check
 
 Now as you have your app built and published, it's time to run it on your mobile phone.
 
-Download the XRHub Android mobile app either by [following the Google Play link](https://play.google.com/store/apps/details?id=io.spheroid.spheroidandroid) or by scanning the QR code:
+Download the XR Hub Android mobile app either by [following the Google Play link](https://play.google.com/store/apps/details?id=io.spheroid.spheroidandroid) or by scanning the QR code:
 
 ![](../../docs/images/coin-quest/15---XR-Hub-QR.png)
 
@@ -107,9 +107,9 @@ Download the XRHub Android mobile app either by [following the Google Play link]
 | --- | --- | --- | --- |
 | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) | ![](../../docs/images/pixel.png) |
 
-Currently, XRHub works on the Android devices that [support ARCore](https://developers.google.com/ar/discover/supported-devices) only. iOS version of the app will be released soon.
+Currently, XR Hub works on the Android devices that [support ARCore](https://developers.google.com/ar/discover/supported-devices) only. iOS version of the app will be released soon.
 
-Launch the XRHub app on your phone.
+Launch the XR Hub app on your phone.
 
 
 | ![](../../docs/images/coin-quest/18---google-app-2.png) | ![](../../docs/images/coin-quest/19---xrhub-splash-1.png) | ![](../../docs/images/coin-quest/20---xrhub-splash-2.png) | ![](../../docs/images/coin-quest/21---xrhub-splash-3.png) |
@@ -134,17 +134,14 @@ See the "Hello world!" log in the "Client" tab in the bottom pane.
 
 ![](../../docs/images/hello-world/example-output.png)
  
-Congratulations, you have successfully run your app in the XRHub! 
+Congratulations, you have successfully run your app in the XR Hub! 
 
 ## Troubleshooting
 
 If you have encountered any problems, please let us know by [submitting an issue](../../docs/submit-an-issue.md), we will make sure to help you find the solution. Please don't hesitate to contact us, as your issues and our replies will help to make our platform better and will be valuable to other developers.
 
-## What next?
+## What's next?
 
-Now that you have learned the basics, you can proceed with the more advanced topics:
-
-* [Create a simple geo-based AR game](../CoinQuest/README.md)
-* [Spheroid Script syntax](../../docs/basic-syntax.md)
-* [Spheroid Script reference](https://spheroiduniverse.github.io/SpheroidScript/)
- 
+- [More examples](..)
+- [Spheroid Script Documentation](https://spheroiduniverse.github.io/SpheroidScript/)
+- [Got a question? Submit an issue on GitHub](../../docs/submit-an-issue.md)

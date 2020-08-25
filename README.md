@@ -15,7 +15,7 @@ Spheroid Script has the following advantages:
 
 - provides the ability to instantly make changes to an already published application, which speeds up and simplifies the development and support cycle of applications written on it
 
-- makes possible to run XR products created by independent developers inside an integrated mobile app in the Spheroid Universe ecosystem - XRHub
+- makes possible to run XR products created by independent developers inside an integrated mobile app in the Spheroid Universe ecosystem - XR Hub
 
 - allows to reduce the cost of computing resources in the cloud by dynamically allocating them to XR applications as needed
 
@@ -23,9 +23,18 @@ Spheroid Script has the following advantages:
 
 - includes Spheroid SQL: built-in database query language
 
-Please, see the Spheroid Script tutorials and documentation:
+Please, see the Spheroid Script documentation and examples
 
-- [Hello World](./examples/HelloWorld/README.md)
-- [Create a simple geo-based AR game](examples/CoinQuest/README.md)
-- [Spheroid Script syntax](./docs/basic-syntax.md)
-- [Spheroid Script reference](https://spheroiduniverse.github.io/SpheroidScript/)
+## Documentation
+- [Spheroid Script Documentation](https://spheroiduniverse.github.io/SpheroidScript/)
+- [Syntax Overview](https://spheroiduniverse.github.io/SpheroidScript/basic-syntax.html)
+- [UI Engine — how to create custom UI using Spheroid Script](https://spheroiduniverse.github.io/SpheroidScript/ui/)
+- [API Reference](https://spheroiduniverse.github.io/SpheroidScript/reference/)
+
+## Examples
+- [Hello, World!](examples/HelloWorld)
+- [Coin Quest — a geo-based AR game](examples/CoinQuest)
+- [UI Demo App](examples/UI)
+
+## Links
+- [Got a question? Submit an issue on GitHub](docs/submit-an-issue.md)

@@ -1,7 +1,7 @@
-# Submit an issue to GitHub
+# How to submit an issue on GitHub
 
 You can submit an issue [here](https://github.com/SpheroidUniverse/SpheroidScript/issues/new). 
-If you don't have a GitHub account yet, sign up [here](https://github.com/).
+If you don't have a GitHub account yet, sign up [here](https://github.com/join).
 
 To help us to solve your issue in the most efficient way, we kindly ask you to follow the below recommendations:
 * Tell us your app id

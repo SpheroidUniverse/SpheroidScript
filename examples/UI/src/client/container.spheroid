@@ -1,0 +1,74 @@
+fun containerPage() =
+    Page(title = "Container", backgroundColor = Color(rgb = 0xFFFFFF)) {
+        Vertical(top = 8dp, left = 18dp, right = 18dp) {
+            Container(height = commentHeight) { Text(text = "1. width = 180dp, height = 50dp", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Container(backgroundColor = Color(rgb = 0xEEEEEE), width = 180dp, height = 50dp) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "2. backgroundColor = Color(rgb = 0xFFFF00)", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Container(backgroundColor = Color(rgb = 0xFFFF00), width = 180dp, height = 50dp) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "3. borderWidth = 2dp", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Container(backgroundColor = Color(rgb = 0xEEEEEE), width = 180dp, height = 50dp, borderWidth = 2dp) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "4. borderColor = Color(rgb = 0xFF0000)", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Container(backgroundColor = Color(rgb = 0xEEEEEE), width = 180dp, height = 50dp, borderWidth = 2dp, borderColor = Color(rgb = 0xFF0000)) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "5. cornerRadius = 12dp", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Container(backgroundColor = Color(rgb = 0xEEEEEE), width = 180dp, height = 50dp, cornerRadius = 12dp) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "6. rotation = Angle(degree = -5)", bottom = 0, textSize = commentTextSize) }
+            Container(height = 65dp) {
+                Container(backgroundColor = Color(rgb = 0xEEEEEE), width = 180dp, height = 50dp, rotation = Angle(degree = -5), verticalAlign = "center", left = 1dp) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "7. onClick { println(\"You tapped a container!\") }", bottom = 0, textSize = commentTextSize) }
+            Container {
+                Container(backgroundColor = Color(rgb = 0xEEEEEE), width = 180dp, height = 50dp) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }.onClick { 
+                    println("You tapped a container!")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "8. horizontalAlign = \"center\"", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                Container(backgroundColor = Color(rgba = 0x00FF0033), width = 180dp, height = 50dp, horizontalAlign = "center") {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "9. left = 12dp", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE)) {
+                Container(backgroundColor = Color(rgba = 0x00FF0033), width = 180dp, height = 50dp, left = 12dp) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "10. verticalAlign = \"center\"", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 100dp) {
+                Container(backgroundColor = Color(rgba = 0x00FF0033), width = 180dp, height = 50dp, verticalAlign = "center") {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = commentHeight) { Text(text = "11. bottom = 8dp", bottom = 0, textSize = commentTextSize) }
+            Container(backgroundColor = Color(rgb = 0xEEEEEE), height = 100dp) {
+                Container(backgroundColor = Color(rgba = 0x00FF0033), width = 180dp, height = 50dp, bottom = 8dp) {
+                    Text(text = "Container", textColor = Color(rgba = 0x00000033), horizontalAlign = "center", verticalAlign = "center")
+                }
+            }
+            Container(height = 24dp)
+        }
+    }

@@ -1,0 +1,7 @@
+main:
+  - title: "Syntax Overview"
+    url: /basic-syntax.html
+  - title: "UI Guide"
+    url: /ui/index.html
+  - title: "Submit an issue"
+    url: /submit-an-issue.html
