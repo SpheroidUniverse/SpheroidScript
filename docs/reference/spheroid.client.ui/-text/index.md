@@ -3,7 +3,9 @@
 
 
 # Text  
- class [Text](index.md) : [TextProperties](../-text-properties/index.md), [Placeable](../-placeable/index.md)   
+ <i>See also [Text in UI Guide](/docs/ui/text.md)</i>  
+  
+class [Text](index.md) : [TextProperties](../-text-properties/index.md), [Placeable](../-placeable/index.md)   
 
 
 ## Constructors  

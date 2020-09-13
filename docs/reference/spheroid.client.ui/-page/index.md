@@ -3,7 +3,9 @@
 
 
 # Page  
- class [Page](index.md)   
+ <i>See also [Page in UI Guide](/docs/ui/page.md)</i>  
+  
+class [Page](index.md)   
 
 
 ## Constructors  

@@ -3,7 +3,9 @@
 
 
 # TextField  
- class [TextField](index.md) : [VisibleField](../-visible-field/index.md), [TextProperties](../-text-properties/index.md), [BorderProperties](../-border-properties/index.md), [Placeable](../-placeable/index.md)   
+ <i>See also [TextField in UI Guide](/docs/ui/textField.md)</i>  
+  
+class [TextField](index.md) : [VisibleField](../-visible-field/index.md), [TextProperties](../-text-properties/index.md), [BorderProperties](../-border-properties/index.md), [Placeable](../-placeable/index.md)   
 
 
 ## Constructors  

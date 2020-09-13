@@ -4,7 +4,7 @@ On this page, we focus on one of the basic components of Spheroid UI Engine, a B
 You can find a quickstart with all source code you need to try the examples 
 [here](https://github.com/SpheroidUniverse/SpheroidScript/tree/master/examples/UI).
 
-When creating an instance of Button class, you need to set the `text` property. 
+When creating an instance of the Button class, you need to set the `text` property. 
 The value should be the text you want to appear on the button.
 
 Below, you will find the examples of using the Button class with different properties.
@@ -30,7 +30,7 @@ property value `true` or `false`.
 ## `onClick` event handler
 
 As you obviously will want to execute some kind of script when a button is tapped,
-add an `onClick` event handler to a button. In an example, we just want to
+add the `onClick` event handler to a button. In an example, we just want to
 print a log message: 
 
 ```
@@ -40,14 +40,17 @@ Button(text = "Button").onClick {
 ```
 ![](../images/ui/button/button-onclick-1.png)
 
+The log is displayed in the "Client" tab of the 
+[Spheroid Demiurge IDE](https://demiurge.spheroiduniverse.io/ide):
+
 ![](../images/ui/button/button-onclick-2.png)
 
 
 ## Color
 
 You can change the button's color by setting the `backgroundColor` property 
-value with any RGB color value.
-This is, for example, what you want to do if you want your button to be green:
+value using the [Color](../reference/spheroid.client.ui/-color/index.md) class instance.
+This is, for example, what you need to do if you want your button to be green:
 
 ```
 Button(text = "Button", backgroundColor = Color(rgb = 0x34C759))
@@ -57,7 +60,7 @@ Button(text = "Button", backgroundColor = Color(rgb = 0x34C759))
 
 ## Corner radius
 
-By default, a button is a slightly rounded. You can make it more rounded by setting the
+By default, a button is slightly rounded. You can make it more rounded by setting the
 `cornerRadius` property with a higher value:
 
 ```
@@ -95,7 +98,7 @@ Button(text = "Button", width = 150dp, height = 60dp)
 
 ## Horizontal and vertical alignment
 
-A button exists in a container, and is aligned to the top left by default.
+A button exists in a container, and is aligned to top left by default.
 If you want to change these settings, use one of the following properties. 
 
 The `horizontalAlign` property sets the horizontal alignment of the button

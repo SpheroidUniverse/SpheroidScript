@@ -18,11 +18,11 @@ entry threshold for developers, simplifying and speeding up development,
 making any changes in the interface possible even after the user has downloaded
 and installed the application.
 
-With the help of the Spheroid UI Engine, you can create and embed any interfaces
+With the help of Spheroid UI Engine, you can create and embed any interfaces
 into your XR application, for example: a storefront with goods, social media feed,
 pages with settings for your XR application, or even a messenger.
 
-## How does UI look if it built on Spheroid UI Engine 
+## How does UI look if it's built on Spheroid UI Engine 
 
 Look at the third image. This is a page displaying the Rarura AR game description.
 This page has been created solely and completely on Spheroid UI Engine.
@@ -41,7 +41,7 @@ You could also expand and minimize the game description just by clicking a butto
 
 You can create any number of different pages and develop the navigation system between them.
 From the table below, you will find which components provide the means for creating 
-such interfaces in Spheroid UI Engine.
+such interfaces on Spheroid UI Engine.
 
 ## Spheroid UI Engine Components
   

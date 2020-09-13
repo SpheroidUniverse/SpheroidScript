@@ -3,7 +3,9 @@
 
 
 # Dialog  
- class [Dialog](index.md)   
+ <i>See also [Dialog in UI Guide](/docs/ui/dialog.md)</i>  
+  
+class [Dialog](index.md)   
 
 
 ## Constructors  

@@ -29,6 +29,7 @@ Please, see the Spheroid Script documentation and examples
 - [Spheroid Script Documentation](https://spheroiduniverse.github.io/SpheroidScript/)
 - [Syntax Overview](https://spheroiduniverse.github.io/SpheroidScript/basic-syntax.html)
 - [UI Engine — how to create custom UI using Spheroid Script](https://spheroiduniverse.github.io/SpheroidScript/ui/)
+- [Spheroid SQL — powerful query language](https://spheroiduniverse.github.io/SpheroidScript/sql/)
 - [API Reference](https://spheroiduniverse.github.io/SpheroidScript/reference/)
 
 ## Examples

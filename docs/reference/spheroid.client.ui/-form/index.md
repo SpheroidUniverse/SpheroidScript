@@ -3,7 +3,9 @@
 
 
 # Form  
- class [Form](index.md)   
+ <i>See also [Form in UI Guide](/docs/ui/form.md)</i>  
+  
+class [Form](index.md)   
 
 
 ## Constructors  

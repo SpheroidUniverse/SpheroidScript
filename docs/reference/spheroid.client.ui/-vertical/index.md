@@ -3,7 +3,9 @@
 
 
 # Vertical  
- class [Vertical](index.md) : [Stack](../-stack/index.md)   
+ <i>See also [Vertical in UI Guide](/docs/ui/vertical.md)</i>  
+  
+class [Vertical](index.md) : [Stack](../-stack/index.md)   
 
 
 ## Constructors  

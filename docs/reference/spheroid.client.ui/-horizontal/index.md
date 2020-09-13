@@ -3,7 +3,9 @@
 
 
 # Horizontal  
- class [Horizontal](index.md) : [Stack](../-stack/index.md)   
+ <i>See also [Horizontal in UI Guide](/docs/ui/horizontal.md)</i>  
+  
+class [Horizontal](index.md) : [Stack](../-stack/index.md)   
 
 
 ## Constructors  

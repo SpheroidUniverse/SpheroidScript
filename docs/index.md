@@ -30,6 +30,7 @@ Please, see the Spheroid Script documentation and examples
 ## Documentation
 - [Syntax Overview](basic-syntax.md)
 - [UI Engine — how to create custom UI using Spheroid Script](ui/index.md)
+- [Spheroid SQL — powerful query language](sql/index.md)
 - [API Reference](reference/index.md)
 
 ## Examples

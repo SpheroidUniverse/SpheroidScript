@@ -3,7 +3,9 @@
 
 
 # Button  
- class [Button](index.md) : [Placeable](../-placeable/index.md)   
+ <i>See also [Button in UI Guide](/docs/ui/button.md)</i>  
+  
+class [Button](index.md) : [Placeable](../-placeable/index.md)   
 
 
 ## Constructors  

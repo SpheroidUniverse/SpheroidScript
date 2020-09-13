@@ -3,7 +3,9 @@
 
 
 # Loader  
- class [Loader](index.md)   
+ <i>See also [Loader in UI Guide](/docs/ui/loader.md)</i>  
+  
+class [Loader](index.md)   
 
 
 ## Constructors  

@@ -4,7 +4,7 @@ On this page, we focus on one of the basic components of Spheroid UI Engine, a C
 You can find a quickstart with all source code you need to try the examples 
 [here](https://github.com/SpheroidUniverse/SpheroidScript/tree/master/examples/UI).
 
-A container is an instrument allowing you to organize the content on the screen.
+A container is an instrument allowing you to organize the content on screen.
 Buttons, images, animations, icons, text and other elements can be placed 
 inside a container. A container can also be nested inside another container. In most cases, 
 you don't want to make the container visible on screen, so by default it's 
@@ -15,16 +15,16 @@ Below, you will find the examples of using the Container class.
 The images corresponding to each example illustrate how the container will look 
 on the mobile device when using different settings and styles.
 
-## Basic usage
+## Basics
 
-When creating an instance of Container class, you don't necessary need to set any properties.
-However, as by default container is transparent, we're using a
+When creating an instance of the Container class, you don't necessary need to set any properties.
+However, as by default container is transparent, we're using the
 [Color](../reference/spheroid.client.ui/-color/index.md) class instance in an example 
 to set the `backgroundColor` property value.
 We're setting the `width` and `height` property values as well.
-Also, in an example we're using a [Text](../reference/spheroid.client.ui/-text/index.md) 
+Also, in an example we're using the [Text](../reference/spheroid.client.ui/-text/index.md) 
 component inside a container, to make it obvious where the container is, 
-as well as to demonstrate the possibility to place elements inside a container.
+as well as to demonstrate the possibility of placing elements inside a container.
 
 ```                
 Container(backgroundColor = Color(rgb = 0xEEEEEE), width = 180dp, height = 50dp) {

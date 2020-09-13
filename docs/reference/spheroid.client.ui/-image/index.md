@@ -3,7 +3,9 @@
 
 
 # Image  
- class [Image](index.md) : [Placeable](../-placeable/index.md)   
+ <i>See also [Image in UI Guide](/docs/ui/image.md)</i>  
+  
+class [Image](index.md) : [Placeable](../-placeable/index.md)   
 
 
 ## Constructors  

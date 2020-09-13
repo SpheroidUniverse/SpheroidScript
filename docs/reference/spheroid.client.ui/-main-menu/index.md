@@ -3,7 +3,16 @@
 
 
 # MainMenu  
- class [MainMenu](index.md)   
+ <i>See also [MainMenu in UI Guide](/docs/ui/mainMenu.md)</i>  
+  
+class [MainMenu](index.md)   
+
+
+## Constructors  
+  
+|  Name|  Summary| 
+|---|---|
+| [&lt;init&gt;](-init-.md)|  fun [&lt;init&gt;](-init-.md)()   <br>
 
 
 ## Functions  

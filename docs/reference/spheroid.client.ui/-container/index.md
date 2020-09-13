@@ -3,7 +3,9 @@
 
 
 # Container  
- class [Container](index.md) : [BorderProperties](../-border-properties/index.md), [Placeable](../-placeable/index.md)   
+ <i>See also [Container in UI Guide](/docs/ui/container.md)</i>  
+  
+class [Container](index.md) : [BorderProperties](../-border-properties/index.md), [Placeable](../-placeable/index.md)   
 
 
 ## Constructors  
